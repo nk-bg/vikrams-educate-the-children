@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educate The Children — Help Kids in South Asia Go to School</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">Educate The Children</a>
+    <button class="nav__toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav__links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="problem.html">The Problem</a></li>
+      <li><a href="stats.html">Stats &amp; Data</a></li>
+      <li><a href="why-unicef.html">Why UNICEF</a></li>
+      <li><a href="donate.html" class="nav__donate">Donate</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero hero--image">
+    <div class="hero__label">A project by Vikram</div>
+    <h1 class="hero__title">Help Children in South Asia<br><span>Go to School</span></h1>
+    <p class="hero__subtitle">Millions of children in Bhutan, Bangladesh, India, Pakistan, and Sri Lanka are unable to attend school. Your donation can change that.</p>
+    <div class="hero__buttons">
+      <a href="donate.html" class="btn btn--primary">Donate Now</a>
+      <a href="problem.html" class="btn btn--outline">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="stats-bar__item">
+      <div class="stats-bar__number stats-bar__number--blue" data-target="32000000">32M+</div>
+      <div class="stats-bar__label">Children Out of School</div>
+    </div>
+    <div class="stats-bar__item">
+      <div class="stats-bar__number stats-bar__number--yellow">5</div>
+      <div class="stats-bar__label">Countries in Focus</div>
+    </div>
+    <div class="stats-bar__item">
+      <div class="stats-bar__number stats-bar__number--blue">50%+</div>
+      <div class="stats-bar__label">Lack Basic Literacy</div>
+    </div>
+    <div class="stats-bar__item">
+      <div class="stats-bar__number stats-bar__number--yellow">$1</div>
+      <div class="stats-bar__label">Can Make a Difference</div>
+    </div>
+  </section>
+
+  <!-- What We Do / Mission Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section__label">Our Mission</div>
+      <h2 class="section__title">What We Do</h2>
+      <div class="mission">
+        <div class="mission__image">
+          <img src="images/classroom.png" alt="Children in a classroom in South Asia">
+        </div>
+        <div class="mission__text">
+          <p><strong>Educate The Children</strong> is a project dedicated to helping children across South Asia access the education they deserve. Across Bhutan, Bangladesh, India, Pakistan, and Sri Lanka, millions of kids are unable to attend school due to poverty, lack of infrastructure, and limited resources.</p>
+          <p>We partner with <span class="highlight-blue">UNICEF</span> to ensure that every dollar donated goes directly toward building schools, providing supplies, and supporting programs that get children into classrooms. Our goal is simple: <span class="highlight-yellow">every child should have the chance to learn.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Country Cards -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Countries We're Focused On</h2>
+      <div class="countries">
+        <div class="country-card" data-country="bangladesh">
+          <div class="country-card__flag">&#127463;&#127465;</div>
+          <div class="country-card__name">Bangladesh</div>
+        </div>
+        <div class="country-card" data-country="bhutan">
+          <div class="country-card__flag">&#127463;&#127481;</div>
+          <div class="country-card__name">Bhutan</div>
+        </div>
+        <div class="country-card" data-country="india">
+          <div class="country-card__flag">&#127470;&#127475;</div>
+          <div class="country-card__name">India</div>
+        </div>
+        <div class="country-card" data-country="pakistan">
+          <div class="country-card__flag">&#127477;&#127472;</div>
+          <div class="country-card__name">Pakistan</div>
+        </div>
+        <div class="country-card" data-country="srilanka">
+          <div class="country-card__flag">&#127473;&#127472;</div>
+          <div class="country-card__name">Sri Lanka</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal Message -->
+  <section class="section">
+    <div class="container" style="text-align:center;max-width:600px;">
+      <p style="font-size:16px;color:var(--text-light);line-height:1.8;font-style:italic;">"I believe that all children should be able to have an education. I myself am very privileged to have one, and I want that same joy for everyone."</p>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:12px;">&mdash; Vikram</p>
+    </div>
+  </section>
+
+  <!-- Country Modal -->
+  <div class="modal-overlay" id="country-modal">
+    <div class="modal">
+      <button class="modal__close">&times;</button>
+      <div class="modal__flag" id="modal-flag"></div>
+      <h3 class="modal__title" id="modal-title"></h3>
+      <p class="modal__text" id="modal-text"></p>
+      <div class="modal__stat" id="modal-stat"></div>
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <div class="cta-banner__title">Ready to Make a Difference?</div>
+    <div class="cta-banner__text">100% of your donation goes to UNICEF to help children access education.</div>
+    <a href="donate.html" class="btn btn--yellow">Donate Now</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Educate The Children &mdash; A project by Vikram &middot; All donations go directly to UNICEF via Every.org</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

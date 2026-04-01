@@ -1,0 +1,778 @@
+/* ===== CSS Variables ===== */
+:root {
+  --bg-dark: #f8faf8;
+  --bg-card: #ffffff;
+  --bg-mid: #e0e8e0;
+  --text-white: #1a2e1a;
+  --text-light: #333;
+  --text-muted: #666;
+  --text-dim: #999;
+  --blue: #4caf7d;
+  --yellow: #2e7d52;
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== Navigation ===== */
+.nav {
+  background: var(--bg-card);
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--bg-mid);
+}
+
+.nav__logo {
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.nav__links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 13px;
+  list-style: none;
+}
+
+.nav__links a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.nav__links a:hover,
+.nav__links a.active {
+  color: var(--text-white);
+}
+
+.nav__links a.active {
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 2px;
+}
+
+.nav__donate {
+  background: var(--blue);
+  color: #fff !important;
+  padding: 5px 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  border-bottom: none !important;
+}
+
+.nav__donate:hover {
+  opacity: 0.9;
+}
+
+/* Mobile nav toggle */
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--bg-card);
+  padding: 20px 32px;
+  text-align: center;
+  border-top: 1px solid var(--bg-mid);
+}
+
+.footer p {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+/* ===== Layout Helpers ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.section--alt {
+  background: var(--bg-card);
+}
+
+.section__label {
+  font-size: 11px;
+  color: var(--yellow);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.section__title {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--text-white);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8f2 50%, #e8f5e9 100%);
+  padding: 60px 32px;
+  text-align: center;
+  position: relative;
+}
+
+.hero--image {
+  background: url('../images/hero.png') center/cover no-repeat;
+  padding: 80px 32px;
+}
+
+.hero--image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero--image * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero--image .hero__label,
+.hero--image .hero__title,
+.hero--image .hero__title span,
+.hero--image .hero__subtitle {
+  color: #fff;
+}
+
+.hero--image .hero__subtitle {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero__label {
+  font-size: 11px;
+  color: var(--yellow);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero__title {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--text-white);
+  line-height: 1.3;
+}
+
+.hero__title span {
+  color: var(--blue);
+}
+
+.hero__subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 16px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__buttons {
+  margin-top: 28px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn--primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.btn--outline {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a2e1a;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}
+
+.btn--yellow {
+  background: var(--yellow);
+  color: #fff;
+}
+
+/* ===== Stats Bar ===== */
+.stats-bar {
+  background: var(--bg-card);
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-top: 1px solid var(--bg-mid);
+  border-bottom: 1px solid var(--bg-mid);
+}
+
+.stats-bar__item {
+  text-align: center;
+}
+
+.stats-bar__number {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.stats-bar__number--blue {
+  color: var(--blue);
+}
+
+.stats-bar__number--yellow {
+  color: var(--yellow);
+}
+
+.stats-bar__label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ===== Country Cards ===== */
+.countries {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.country-card {
+  background: var(--bg-dark);
+  border: 1px solid var(--bg-mid);
+  border-radius: 8px;
+  padding: 20px 16px;
+  text-align: center;
+  width: 120px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.country-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue);
+}
+
+.country-card__flag {
+  font-size: 28px;
+}
+
+.country-card__name {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 6px;
+  font-weight: bold;
+}
+
+/* ===== CTA Banner ===== */
+.cta-banner {
+  background: linear-gradient(135deg, var(--blue), #2e7d52);
+  padding: 36px 32px;
+  text-align: center;
+  margin: 32px;
+  border-radius: 12px;
+}
+
+.cta-banner__title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.cta-banner__text {
+  font-size: 13px;
+  color: #e0f0e0;
+  margin-top: 8px;
+}
+
+.cta-banner .btn {
+  margin-top: 16px;
+}
+
+/* ===== Mission / What We Do ===== */
+.mission {
+  display: flex;
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.mission__image {
+  flex: 1;
+  background: var(--bg-card);
+  border-radius: 10px;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bg-mid);
+  overflow: hidden;
+}
+
+.mission__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.mission__text {
+  flex: 1;
+}
+
+.mission__text p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.mission__text strong {
+  color: var(--text-white);
+}
+
+.mission__text .highlight-blue {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.mission__text .highlight-yellow {
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+/* ===== Barrier Cards (The Problem page) ===== */
+.barrier {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 36px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.barrier__icon {
+  font-size: 36px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.barrier__content h3 {
+  font-size: 18px;
+  color: var(--text-white);
+  margin-bottom: 8px;
+}
+
+.barrier__content p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.barrier__stat {
+  font-size: 13px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* ===== Quote Hero ===== */
+.quote-hero {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8f2 50%, #e8f5e9 100%);
+  padding: 60px 32px;
+  text-align: center;
+}
+
+.quote-hero__text {
+  font-size: 22px;
+  color: var(--text-white);
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.quote-hero__attribution {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 16px;
+}
+
+/* ===== Charts (Stats page) ===== */
+.charts-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.chart-card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-mid);
+  border-radius: 10px;
+  padding: 24px;
+  flex: 1;
+}
+
+.chart-card--full {
+  flex: none;
+  width: 100%;
+}
+
+.chart-card__title {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--text-white);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.chart-card canvas {
+  width: 100% !important;
+  max-height: 300px;
+}
+
+.chart-card__takeaway {
+  font-size: 13px;
+  color: var(--yellow);
+  text-align: center;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+.chart-card__source {
+  font-size: 11px;
+  color: var(--text-dim);
+  text-align: center;
+  margin-top: 6px;
+}
+
+/* ===== Fact Cards ===== */
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.fact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-mid);
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+}
+
+.fact-card__number {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.fact-card__text {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.fact-card__source {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Why UNICEF page ===== */
+.info-section {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.info-section h3 {
+  font-size: 18px;
+  color: var(--text-white);
+  margin-bottom: 12px;
+}
+
+.info-section p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.info-section ul {
+  list-style: none;
+  margin-top: 12px;
+}
+
+.info-section ul li {
+  font-size: 14px;
+  color: var(--text-light);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--bg-mid);
+}
+
+.info-section ul li::before {
+  content: "✓ ";
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* ===== Donate page ===== */
+.donate-message {
+  font-size: 16px;
+  color: var(--text-light);
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+
+.donation-amounts {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.donation-card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-mid);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 160px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.donation-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--yellow);
+}
+
+.donation-card__amount {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--yellow);
+  margin-bottom: 8px;
+}
+
+.donation-card__impact {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.donate-widget {
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border-radius: 10px;
+  padding: 24px;
+  border: 1px solid var(--bg-mid);
+  text-align: center;
+}
+
+/* ===== Modal ===== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-mid);
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: modalIn 0.25s ease;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.9) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal__close:hover {
+  color: var(--text-white);
+}
+
+.modal__flag {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.modal__title {
+  font-size: 20px;
+  color: var(--text-white);
+  margin-bottom: 12px;
+}
+
+.modal__text {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.modal__stat {
+  font-size: 13px;
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+.country-card {
+  cursor: pointer;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav__links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    padding: 16px;
+    gap: 12px;
+    border-bottom: 1px solid var(--bg-mid);
+  }
+
+  .nav__links.open {
+    display: flex;
+  }
+
+  .nav__toggle {
+    display: block;
+  }
+
+  .hero__title {
+    font-size: 24px;
+  }
+
+  .stats-bar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mission {
+    flex-direction: column;
+  }
+
+  .charts-row {
+    flex-direction: column;
+  }
+
+  .countries {
+    gap: 8px;
+  }
+
+  .country-card {
+    width: 100px;
+  }
+
+  .cta-banner {
+    margin: 16px;
+  }
+
+  .donation-amounts {
+    flex-direction: column;
+    align-items: center;
+  }
+}

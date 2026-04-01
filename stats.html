@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stats &amp; Data — Educate The Children</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">Educate The Children</a>
+    <button class="nav__toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="problem.html">The Problem</a></li>
+      <li><a href="stats.html" class="active">Stats &amp; Data</a></li>
+      <li><a href="why-unicef.html">Why UNICEF</a></li>
+      <li><a href="donate.html" class="nav__donate">Donate</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__label">The Data</div>
+    <h1 class="hero__title">Stats &amp; <span>Data</span></h1>
+    <p class="hero__subtitle">The numbers behind the education crisis in South Asia.</p>
+  </section>
+
+  <!-- Key Facts -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Key Facts</h2>
+      <div class="facts-grid">
+        <div class="fact-card">
+          <div class="fact-card__number">32M+</div>
+          <div class="fact-card__text">children in South Asia are not enrolled in any school</div>
+          <div class="fact-card__source">UNESCO, 2023</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-card__number">2 in 3</div>
+          <div class="fact-card__text">children in South Asia cannot read a simple sentence by age 10</div>
+          <div class="fact-card__source">World Bank, 2022</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-card__number">$1.5T</div>
+          <div class="fact-card__text">is lost in potential earnings each year due to children not learning</div>
+          <div class="fact-card__source">World Bank, 2022</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-card__number">12M+</div>
+          <div class="fact-card__text">girls in South Asia are out of school — more than boys</div>
+          <div class="fact-card__source">UNICEF Data, 2023</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-card__number">50%</div>
+          <div class="fact-card__text">of out-of-school children live in conflict-affected areas</div>
+          <div class="fact-card__source">UNICEF, 2023</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-card__number">1 year</div>
+          <div class="fact-card__text">of extra schooling increases a person's earnings by up to 10%</div>
+          <div class="fact-card__source">UNESCO Global Education Monitoring Report</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Charts -->
+  <section class="section section--alt">
+    <div class="container">
+
+      <!-- Row 1: Two bar charts -->
+      <div class="charts-row">
+        <div class="chart-card">
+          <div class="chart-card__title">Out-of-School Children by Country</div>
+          <canvas id="chart-oos-country"></canvas>
+          <div class="chart-card__takeaway">Pakistan has the highest number of out-of-school children in the region.</div>
+          <div class="chart-card__source">Source: UNESCO Institute for Statistics, 2023</div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-card__title">Literacy Rates by Country</div>
+          <canvas id="chart-literacy"></canvas>
+          <div class="chart-card__takeaway">Sri Lanka leads the region, while Bangladesh and Pakistan lag behind.</div>
+          <div class="chart-card__source">Source: World Bank Development Indicators, 2022</div>
+        </div>
+      </div>
+
+      <!-- Spotlight: Pie chart -->
+      <div class="charts-row">
+        <div class="chart-card chart-card--full">
+          <div class="chart-card__title">Children in School vs. Not in School</div>
+          <canvas id="chart-pie" style="max-height:350px;"></canvas>
+          <div class="chart-card__takeaway">Roughly 1 in 8 children in South Asia are not attending school.</div>
+          <div class="chart-card__source">Source: UNICEF Data — Education, 2023</div>
+        </div>
+      </div>
+
+      <!-- Donut: Child labor -->
+      <div class="charts-row">
+        <div class="chart-card chart-card--full">
+          <div class="chart-card__title">Children Who Work Instead of Going to School</div>
+          <canvas id="chart-donut" style="max-height:350px;"></canvas>
+          <div class="chart-card__takeaway">Over 26 million children in South Asia are engaged in child labor instead of attending school.</div>
+          <div class="chart-card__source">Source: UNICEF &amp; ILO — Child Labour: Global Estimates, 2020</div>
+        </div>
+      </div>
+
+      <!-- Row 2: Two line charts -->
+      <div class="charts-row">
+        <div class="chart-card">
+          <div class="chart-card__title">School Enrollment Over the Years</div>
+          <canvas id="chart-enrollment"></canvas>
+          <div class="chart-card__takeaway">Enrollment has improved since 2000, but progress has stalled in recent years.</div>
+          <div class="chart-card__source">Source: UNESCO Institute for Statistics, 2000–2024</div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-card__title">Out-of-School Children Over Time</div>
+          <canvas id="chart-oos-time"></canvas>
+          <div class="chart-card__takeaway">The number of out-of-school children dropped significantly but remains stubbornly high.</div>
+          <div class="chart-card__source">Source: UNESCO Institute for Statistics, 2000–2024</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <div class="cta-banner__title">The Data is Clear — Children Need Help</div>
+    <div class="cta-banner__text">Your donation goes directly to UNICEF to change these numbers.</div>
+    <a href="donate.html" class="btn btn--yellow">Donate Now</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Educate The Children &mdash; A project by Vikram &middot; All donations go directly to UNICEF via Every.org</p>
+  </footer>
+
+  <script src="js/charts.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
