@@ -16,7 +16,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="problem.html">The Problem</a></li>
       <li><a href="stats.html">Stats &amp; Data</a></li>
-      <li><a href="why-unicef.html">Why UNICEF</a></li>
+      <li><a href="why-room-to-read.html">Why Room to Read</a></li>
       <li><a href="donate.html" class="nav__donate active">Donate</a></li>
     </ul>
   </nav>
@@ -30,40 +30,59 @@
   <!-- Donate Content -->
   <section class="section">
     <div class="container">
-      <p class="donate-message">Every dollar you give goes directly to UNICEF to help children in South Asia get the education they deserve.</p>
+      <p class="donate-message">Every dollar you give goes to Room to Read, funding literacy and girls' education across South Asia.</p>
+
+      <div class="click-counter" id="click-counter" hidden>
+        <span class="click-counter__icon">&#128588;</span>
+        <span class="click-counter__text">
+          <strong id="click-counter-value">0</strong> <span id="click-counter-label">people have clicked to support this cause</span>
+        </span>
+      </div>
 
       <!-- Suggested Amounts -->
       <div class="donation-amounts">
-        <a href="https://www.every.org/unicef-usa?amount=5#donate" target="_blank" rel="noopener" class="donation-card">
+        <a href="https://roomtoread.donorsupport.co/-/XCHPSGGB?amount=5" target="_blank" rel="noopener" class="donation-card">
+          <div class="donation-card__icon">&#9999;&#65039;</div>
           <div class="donation-card__amount">$5</div>
-          <div class="donation-card__impact">Buys school supplies for one child</div>
+          <div class="donation-card__impact">Buys pencils, notebooks, and basic supplies for a child</div>
         </a>
-        <a href="https://www.every.org/unicef-usa?amount=10#donate" target="_blank" rel="noopener" class="donation-card">
-          <div class="donation-card__amount">$10</div>
-          <div class="donation-card__impact">Funds textbooks for a semester</div>
-        </a>
-        <a href="https://www.every.org/unicef-usa?amount=25#donate" target="_blank" rel="noopener" class="donation-card">
+        <a href="https://roomtoread.donorsupport.co/-/XCHPSGGB?amount=25" target="_blank" rel="noopener" class="donation-card">
+          <div class="donation-card__icon">&#128218;</div>
           <div class="donation-card__amount">$25</div>
-          <div class="donation-card__impact">Funds a month of school for one child</div>
+          <div class="donation-card__impact">Fills a library shelf with 25 children's books in local languages</div>
         </a>
-        <a href="https://www.every.org/unicef-usa?amount=50#donate" target="_blank" rel="noopener" class="donation-card">
+        <a href="https://roomtoread.donorsupport.co/-/XCHPSGGB?amount=50" target="_blank" rel="noopener" class="donation-card">
+          <div class="donation-card__icon">&#128214;</div>
           <div class="donation-card__amount">$50</div>
-          <div class="donation-card__impact">Trains a teacher for a week</div>
+          <div class="donation-card__impact">Funds a year in the Literacy Program for one child</div>
+        </a>
+        <a href="https://roomtoread.donorsupport.co/-/XCHPSGGB?amount=250" target="_blank" rel="noopener" class="donation-card">
+          <div class="donation-card__icon">&#127891;</div>
+          <div class="donation-card__amount">$250</div>
+          <div class="donation-card__impact">Supports a girl through a year of secondary school</div>
         </a>
       </div>
 
       <!-- Donate Button -->
       <div class="donate-widget">
-        <p style="font-size:18px;color:var(--text-white);font-weight:bold;margin-bottom:12px;">Donate through Every.org</p>
-        <p style="font-size:13px;color:var(--text-muted);margin-bottom:24px;">You'll be taken to Every.org to complete your donation securely. Every.org is a trusted nonprofit platform — 100% of your donation goes to UNICEF.</p>
-        <a href="https://www.every.org/unicef-usa#/donate" target="_blank" rel="noopener" class="btn btn--yellow" style="font-size:16px;padding:16px 48px;">Donate to UNICEF</a>
+        <div class="donate-widget__logo-panel">
+          <img src="images/roomtoread-logo.png" alt="Room to Read" class="donate-widget__logo">
+        </div>
+        <p class="donate-widget__about">Room to Read is a global nonprofit that has helped more than 50 million children learn to read and stay in school. They work across South Asia &mdash; including Bangladesh, India, Nepal, and Sri Lanka &mdash; publishing children's books in local languages, building libraries, and supporting girls through secondary school.</p>
+        <p style="font-size:18px;color:var(--text-white);font-weight:bold;margin-bottom:12px;">Donate through Room to Read</p>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:24px;">You'll be taken to roomtoread.org to complete your donation securely.</p>
+        <a href="https://roomtoread.donorsupport.co/-/XCHPSGGB" target="_blank" rel="noopener" class="btn btn--yellow" style="font-size:16px;padding:16px 48px;">Donate to Room to Read</a>
+        <div class="trust-badges">
+          <img src="images/charity-navigator-4star.png" alt="Charity Navigator Four-Star Rating" class="trust-badge">
+          <div class="trust-badges__text">Rated 4 stars by Charity Navigator for financial accountability and transparency.</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>Educate The Children &mdash; A project by Vikram &middot; All donations go directly to UNICEF via Every.org</p>
+    <p>Educate The Children &mdash; A project by Vikram &middot; Donations go to Room to Read</p>
   </footer>
 
   <script src="js/main.js"></script>

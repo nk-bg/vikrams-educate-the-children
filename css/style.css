@@ -551,7 +551,7 @@ img {
   }
 }
 
-/* ===== Why UNICEF page ===== */
+/* ===== Why Room to Read page ===== */
 .info-section {
   max-width: 700px;
   margin: 0 auto 40px;
@@ -619,6 +619,12 @@ img {
   border-color: var(--yellow);
 }
 
+.donation-card__icon {
+  font-size: 36px;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
 .donation-card__amount {
   font-size: 28px;
   font-weight: bold;
@@ -629,6 +635,85 @@ img {
 .donation-card__impact {
   font-size: 13px;
   color: var(--text-light);
+}
+
+.click-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--bg-mid);
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 0 auto 28px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.click-counter__icon {
+  font-size: 18px;
+}
+
+.click-counter strong {
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+/* Wrapper to center the inline-flex counter */
+.container > .click-counter {
+  display: flex;
+  width: fit-content;
+}
+
+.donate-widget__logo-panel {
+  background: #1a2332;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.donate-widget__logo {
+  display: block;
+  max-width: 140px;
+  height: auto;
+}
+
+.donate-widget__about {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.trust-badges {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--bg-mid);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.trust-badge {
+  width: 72px;
+  height: 72px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.trust-badges__text {
+  font-size: 12px;
+  color: var(--text-muted);
+  max-width: 260px;
+  text-align: left;
+  line-height: 1.5;
 }
 
 .donate-widget {

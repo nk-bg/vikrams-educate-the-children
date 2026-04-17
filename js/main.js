@@ -123,6 +123,45 @@ if (modal) {
   });
 }
 
+// Donate click counter (uses free abacus.jasoncameron.dev service)
+var counterEl = document.getElementById('click-counter');
+var counterValueEl = document.getElementById('click-counter-value');
+var counterLabelEl = document.getElementById('click-counter-label');
+
+if (counterEl && counterValueEl) {
+  var COUNTER_URL = 'https://abacus.jasoncameron.dev';
+  var NAMESPACE = 'vikram-educate-the-children';
+  var KEY = 'donate-clicks';
+
+  function renderCount(n) {
+    counterValueEl.textContent = n;
+    if (counterLabelEl) {
+      counterLabelEl.textContent = (n === 1)
+        ? 'person has clicked to support this cause'
+        : 'people have clicked to support this cause';
+    }
+    counterEl.hidden = false;
+  }
+
+  fetch(COUNTER_URL + '/get/' + NAMESPACE + '/' + KEY)
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      renderCount((data && typeof data.value === 'number') ? data.value : 0);
+    })
+    .catch(function() { renderCount(0); });
+
+  document.querySelectorAll('a[href*="roomtoread"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      fetch(COUNTER_URL + '/hit/' + NAMESPACE + '/' + KEY, { keepalive: true })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data && typeof data.value === 'number') renderCount(data.value);
+        })
+        .catch(function() { /* fail silently */ });
+    });
+  });
+}
+
 // Fade-in on scroll for sections
 var fadeElements = document.querySelectorAll('.barrier, .country-card, .chart-card, .info-section, .donation-card');
 
