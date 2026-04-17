@@ -189,6 +189,29 @@ img {
   color: rgba(255, 255, 255, 0.85);
 }
 
+.hero__partner {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero__partner-label {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+
+.hero__partner-logo {
+  height: 110px;
+  width: auto;
+  opacity: 1;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
 .hero__label {
   font-size: 11px;
   color: var(--yellow);
